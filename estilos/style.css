@@ -77,6 +77,7 @@ main {
 }
 #ficha .foto {
   width: 200px;
+  height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
@@ -259,6 +260,21 @@ footer a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2 / 3;
+    height: fit-content;
+    position: sticky;
+    top: 75px;
+  }
+
+  section#detalhes {
+    grid-column: 3 / 4;
+  }
+
   .skills-container {
     grid-template-columns: 1fr 1fr;
   }
